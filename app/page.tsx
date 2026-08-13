@@ -33,33 +33,9 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero shell">
-          <div className="hero-copy">
-            <p className="eyebrow">Print • color • enjoy</p>
-            <h1>Free coloring pages for bright little moments.</h1>
-            <p>
-              Pick a page, print it at home, and make it yours. Explore animals,
-              flowers, cozy scenes, fantasy worlds, and mandalas for every mood.
-            </p>
-            <div className="hero-actions">
-              <Link className="button" href="/coloring-pages">
-                Browse all coloring pages
-              </Link>
-              <Link className="text-link" href="/mandalas">
-                Explore mandalas <span>→</span>
-              </Link>
-            </div>
-          </div>
-          <div className="hero-art" aria-hidden="true">
-            <div className="sun-shape" />
-            <img
-              src="/coloring-pages/bees-and-sunflowers-mandala-coloring-page.webp"
-              width="800"
-              height="800"
-              alt=""
-            />
-            <span className="bee bee-one">●</span>
-            <span className="bee bee-two">●</span>
-          </div>
+          <p className="eyebrow">Free printable coloring pages</p>
+          <h1>Coloring pages to print, color, and enjoy.</h1>
+          <p>Free printables for kids, families, classrooms, and quiet creative breaks.</p>
         </section>
         <section className="section shell">
           <div className="section-heading">

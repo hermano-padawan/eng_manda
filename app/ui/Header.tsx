@@ -1,14 +1,17 @@
+/* eslint-disable @next/next/no-img-element -- compact pre-sized WebP brand asset */
 import Link from "next/link";
 export default function Header() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="ColoryBee home">
-          <span className="brand-mark" aria-hidden="true">
-            <i />
-            <b />
-            <em />
-          </span>
+          <img
+            className="brand-logo"
+            src="/colorybee-logo.webp"
+            width="48"
+            height="48"
+            alt=""
+          />
           <span>
             Colory<strong>Bee</strong>
           </span>
