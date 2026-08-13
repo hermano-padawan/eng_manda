@@ -60,6 +60,16 @@ export default function RootLayout({
               </Link>
               <p>Free pages. Fresh ideas. Happy colors.</p>
             </div>
+            <div className="footer-social">
+              <strong>Follow us</strong>
+              <a
+                href="https://www.facebook.com/colorybee/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+            </div>
             <nav aria-label="Legal information">
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>

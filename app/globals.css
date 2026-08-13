@@ -489,7 +489,7 @@ footer {
 .footer-inner {
   min-height: 150px;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
   gap: 45px;
   font-size: 12px;
@@ -502,6 +502,21 @@ footer {
 }
 .footer-inner p {
   margin: 7px 0 0;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer-social strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+.footer-social a {
+  text-decoration: none;
+}
+.footer-social a:hover {
+  text-decoration: underline;
 }
 .footer-inner nav {
   display: flex;
