@@ -9,3 +9,7 @@ test("catalogue contains 52 local English-named assets",async()=>{const data=awa
 test("drawing metadata includes canonical, hreflang, and schema",async()=>{const source=await readFile("app/coloring-pages/[slug]/page.tsx","utf8");assert.match(source,/canonical:\s*url/);assert.match(source,/es:\s*item\.spanishUrl/);assert.match(source,/"@type":\s*"ImageObject"/);assert.match(source,/"@type":\s*"BreadcrumbList"/)});
 
 test("sitemap and robots use the central domain",async()=>{const sitemap=await readFile("app/sitemap.ts","utf8");const robots=await readFile("app/robots.ts","utf8");assert.match(sitemap,/absoluteUrl/);assert.match(robots,/site\.domain/)});
+
+test("GitHub Pages export targets the custom domain root",async()=>{const exporter=await readFile("scripts/export-github-pages.mjs","utf8");assert.doesNotMatch(exporter,/`\/$\{repository\}`/);assert.doesNotMatch(exporter,/\(\["'\]\)\\\//);assert.match(exporter,/"CNAME"\), "colorybee\.site\\n"/)});
+
+test("search-engine favicon variants are configured",async()=>{const layout=await readFile("app/layout.tsx","utf8");const assets=await readdir("public");assert.match(layout,/favicon-48x48\.png/);assert.match(layout,/favicon-192x192\.png/);assert.ok(assets.includes("favicon-48x48.png"));assert.ok(assets.includes("favicon-192x192.png"))});

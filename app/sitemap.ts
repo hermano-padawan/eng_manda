@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { categories, coloringPages } from "./data";
 import { absoluteUrl } from "./config";
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-08-13");
+  const lastModified = new Date();
   return [
     { url: absoluteUrl("/"), lastModified, priority: 1 },
     { url: absoluteUrl("/coloring-pages"), lastModified, priority: 0.9 },

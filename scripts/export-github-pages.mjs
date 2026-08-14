@@ -2,8 +2,6 @@ import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const origin = process.env.EXPORT_ORIGIN || "http://127.0.0.1:3000";
-const repository = process.env.GITHUB_REPOSITORY?.split("/")[1] || "eng_manda";
-const base = process.env.GITHUB_ACTIONS ? `/${repository}` : "";
 const output = path.resolve("gh-pages");
 const source = await readFile("app/data.ts", "utf8");
 const pageSlugs = [...source.matchAll(/\bpage\(\s*"([^"]+)"/g)].map((match) => match[1]);
@@ -51,8 +49,6 @@ for (const route of routes) {
     .replace(/<link[^>]+rel=["']modulepreload["'][^>]*>/g, "")
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")
     .replace("</head>", `${streamedMetadata.join("")}${jsonLd.join("")}</head>`)
-    .replace(/(["'])\/(?!\/)/g, `$1${base}/`)
-    .replace(/https:\/\/colorybee\.site\//g, "https://colorybee.site/")
     .replace("</body>", `${interactions}</body>`);
   const directory = route === "/" ? output : path.join(output, route.slice(1));
   await mkdir(directory, { recursive: true });
@@ -60,10 +56,11 @@ for (const route of routes) {
 }
 
 await writeFile(path.join(output, ".nojekyll"), "");
+await writeFile(path.join(output, "CNAME"), "colorybee.site\n");
 await cp(path.join(output, "index.html"), path.join(output, "404.html"));
 for (const file of ["sitemap.xml", "robots.txt"]) {
   const response = await fetch(`${origin}/${file}`);
   if (!response.ok) throw new Error(`Unable to export ${file}: ${response.status}`);
   await writeFile(path.join(output, file), await response.text());
 }
-console.log(`Exported ${routes.length} pages to ${output} with base ${base || "/"}`);
+console.log(`Exported ${routes.length} pages to ${output} for https://colorybee.site/`);
