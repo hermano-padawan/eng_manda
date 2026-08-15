@@ -462,6 +462,16 @@ figcaption {
   background: var(--mint);
   font-size: 20px;
 }
+.email-reveal {
+  padding: 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .not-found {
   min-height: 68vh;
   padding-top: 90px;

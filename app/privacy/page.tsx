@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContentPage from "../ui/ContentPage";
-import { site } from "../config";
+import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "ColoryBee privacy policy.",
@@ -33,8 +33,7 @@ export default function Privacy() {
       </p>
       <h2>Your questions</h2>
       <p>
-        Contact <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>{" "}
-        with privacy questions.
+        Use our <EmailReveal /> for privacy questions.
       </p>
     </ContentPage>
   );

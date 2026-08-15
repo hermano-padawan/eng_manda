@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContentPage from "../ui/ContentPage";
-import { site } from "../config";
+import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms for using ColoryBee printable coloring pages.",
@@ -29,8 +29,7 @@ export default function Terms() {
       </p>
       <h2>Contact</h2>
       <p>
-        For licensing questions, email{" "}
-        <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+        For licensing questions, use our <EmailReveal />.
       </p>
     </ContentPage>
   );

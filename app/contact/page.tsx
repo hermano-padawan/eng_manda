@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContentPage from "../ui/ContentPage";
-import { site } from "../config";
+import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact ColoryBee about its printable coloring pages.",
@@ -14,7 +14,7 @@ export default function Contact() {
         reach ColoryBee at:
       </p>
       <div className="contact-box">
-        <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+        <EmailReveal />
       </div>
       <p>
         Please include the URL of the page you are writing about so we can help
