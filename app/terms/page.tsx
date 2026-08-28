@@ -4,7 +4,7 @@ import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms for using ColoryBee printable coloring pages.",
-  alternates: { canonical: "/terms" },
+  alternates: { canonical: "/terms/" },
 };
 export default function Terms() {
   return (

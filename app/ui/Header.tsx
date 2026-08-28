@@ -17,9 +17,9 @@ export default function Header() {
           </span>
         </Link>
         <nav aria-label="Main navigation">
-          <Link href="/coloring-pages">Coloring pages</Link>
-          <Link href="/mandalas">Mandalas</Link>
-          <Link href="/about">About</Link>
+          <Link href="/coloring-pages/">Coloring pages</Link>
+          <Link href="/coloring-pages/category/geometric/">Mandalas</Link>
+          <Link href="/about/">About</Link>
         </nav>
       </div>
     </header>

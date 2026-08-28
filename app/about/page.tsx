@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "About ColoryBee",
   description:
     "Learn why ColoryBee makes free printable coloring pages for creative time at home and in the classroom.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
 };
 export default function About() {
   return (

@@ -4,7 +4,7 @@ import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact ColoryBee about its printable coloring pages.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 export default function Contact() {
   return (

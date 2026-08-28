@@ -9,15 +9,15 @@ const categoryBlock = source.match(/export const categories = \[([\s\S]+?)\] as 
 const categorySlugs = [...categoryBlock.matchAll(/slug:\s*"([^"]+)"/g)].map((match) => match[1]);
 const routes = [
   "/",
-  "/coloring-pages",
-  "/mandalas",
-  "/about",
-  "/contact",
-  "/privacy",
-  "/terms",
-  ...categorySlugs.map((slug) => `/coloring-pages/category/${slug}`),
-  ...pageSlugs.map((slug) => `/coloring-pages/${slug}`),
+  "/coloring-pages/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/terms/",
+  ...categorySlugs.map((slug) => `/coloring-pages/category/${slug}/`),
+  ...pageSlugs.map((slug) => `/coloring-pages/${slug}/`),
 ];
+const redirectingInternalHref = /href=(["'])(\/(?:coloring-pages(?:\/[^"'?#]*[^/"'?#])?|about|contact|privacy|terms))([?#][^"']*)?\1/g;
 
 for (let attempt = 0; attempt < 30; attempt++) {
   try {
@@ -49,7 +49,11 @@ for (const route of routes) {
     .replace(/<link[^>]+rel=["']modulepreload["'][^>]*>/g, "")
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")
     .replace("</head>", `${streamedMetadata.join("")}${jsonLd.join("")}</head>`)
+    .replace(redirectingInternalHref, (_match, quote, href, suffix = "") => `href=${quote}${href}/${suffix}${quote}`)
     .replace("</body>", `${interactions}</body>`);
+  if (redirectingInternalHref.test(html)) {
+    throw new Error(`Redirecting internal link found in ${route}`);
+  }
   const directory = route === "/" ? output : path.join(output, route.slice(1));
   await mkdir(directory, { recursive: true });
   await writeFile(path.join(directory, "index.html"), html);

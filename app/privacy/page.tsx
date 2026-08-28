@@ -4,7 +4,7 @@ import EmailReveal from "../ui/EmailReveal";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "ColoryBee privacy policy.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: "/privacy/" },
 };
 export default function Privacy() {
   return (

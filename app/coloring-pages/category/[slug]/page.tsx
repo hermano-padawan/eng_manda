@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const category = getCategory(slug);
   if (!category) return {};
-  const url = `/coloring-pages/category/${category.slug}`;
+  const url = `/coloring-pages/category/${category.slug}/`;
   return {
     title: category.title,
     description: category.description,

@@ -7,5 +7,10 @@ export const site = {
 } as const;
 
 export function absoluteUrl(path: string) {
-  return new URL(path, site.domain).toString();
+  const url = new URL(path, site.domain);
+  const finalSegment = url.pathname.split("/").at(-1) ?? "";
+  if (url.pathname !== "/" && !url.pathname.endsWith("/") && !finalSegment.includes(".")) {
+    url.pathname += "/";
+  }
+  return url.toString();
 }

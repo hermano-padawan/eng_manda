@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!item) return {};
   const title = `${item.title} Coloring Page`;
   const description = `Download and print this ${item.title.toLowerCase()} coloring page. ${item.description}`;
-  const url = `/coloring-pages/${item.slug}`;
+  const url = `/coloring-pages/${item.slug}/`;
   return {
     title,
     description,
@@ -65,7 +65,7 @@ export default async function ColoringPage({
   if (!item) notFound();
   const category = getCategory(item.category)!;
   const related = getRelated(item);
-  const url = `/coloring-pages/${item.slug}`;
+  const url = `/coloring-pages/${item.slug}/`;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [

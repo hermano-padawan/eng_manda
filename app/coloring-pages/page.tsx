@@ -8,7 +8,7 @@ const description =
 export const metadata: Metadata = {
   title: "Free Printable Coloring Pages",
   description,
-  alternates: { canonical: "/coloring-pages" },
+  alternates: { canonical: "/coloring-pages/" },
 };
 export default function AllPages() {
   return (
