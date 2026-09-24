@@ -6,7 +6,7 @@ import Header from "../../ui/Header";
 import Breadcrumbs from "../../ui/Breadcrumbs";
 import Actions from "../../ui/Actions";
 import Card from "../../ui/Card";
-import { coloringPages, getCategory, getPage, getRelated } from "../../data";
+import { coloringPages, getCategory, getPage, getRelated, seoExperiments } from "../../data";
 import { absoluteUrl, site } from "../../config";
 export function generateStaticParams() {
   return coloringPages.map(({ slug }) => ({ slug }));
@@ -65,6 +65,7 @@ export default async function ColoringPage({
   if (!item) notFound();
   const category = getCategory(item.category)!;
   const related = getRelated(item);
+  const seoContent = seoExperiments[item.slug];
   const url = `/coloring-pages/${item.slug}/`;
   const schema = {
     "@context": "https://schema.org",
@@ -167,6 +168,21 @@ export default async function ColoringPage({
             <figcaption>{item.title} printable coloring sheet</figcaption>
           </figure>
         </article>
+        {seoContent && (
+          <section className="how-to">
+            <div>
+              <p className="eyebrow">About this printable</p>
+              <h2>About this coloring page</h2>
+            </div>
+            <div>
+              <p>{seoContent.about}</p>
+              <h2>Coloring ideas</h2>
+              <p>{seoContent.ideas}</p>
+              <h2>Printing tips</h2>
+              <p>{seoContent.printTip}</p>
+            </div>
+          </section>
+        )}
         <section className="how-to">
           <div>
             <p className="eyebrow">Coloring notes</p>
