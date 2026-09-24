@@ -16,6 +16,7 @@ export type ColoringPage = {
   spanishUrl: string;
   category: CategorySlug;
   tags: string[];
+  seoContent?: { about: string; ideas: string; printTip: string };
 };
 
 const page = (
@@ -638,3 +639,32 @@ export function getRelated(item: ColoringPage) {
     )
     .slice(0, 4);
 }
+
+
+export const seoExperiments: Record<string, NonNullable<ColoringPage["seoContent"]>> = {
+  "capybara-with-flowers": {
+    about: "This capybara coloring page places a relaxed capybara at the center of a broad floral wreath. The large animal shape is easy to identify, while the surrounding petals and leaves add enough detail for a longer coloring session without making the picture feel crowded. It works well for children who like cute animals and for anyone looking for a calm nature-themed printable.",
+    ideas: "Try warm brown or sandy tones for the capybara and use brighter pinks, yellows, oranges, or purples for the flowers. Keeping the leaves in two shades of green helps the animal stand out from the wreath. For a softer result, repeat a small palette around the circle instead of giving every flower a different color.",
+    printTip: "Print on A4 or Letter paper using fit-to-page. Colored pencils suit the smaller floral details, while crayons or markers work well on the larger capybara shape."
+  },
+  "floral-cat-mandala": {
+    about: "This floral cat coloring page combines a clear cat face with a symmetrical arrangement of petals and leaves. The centered composition keeps the cat as the focal point while the botanical shapes create a mandala-like frame. The mix of larger facial areas and smaller decorative sections makes it suitable for colorists who want an animal picture with moderate detail.",
+    ideas: "Choose the cat color first, then build the flower palette around it. A gray, ginger, cream, or black-and-white cat can be paired with two or three repeating flower colors. Using a darker shade on the outer leaves and lighter colors near the face can make the cat appear more prominent.",
+    printTip: "For crisp botanical details, print at full quality on A4 or Letter paper. Pencils allow more control around the face and leaves; markers are best used on heavier paper."
+  },
+  "botanical-elephant-mandala": {
+    about: "This elephant coloring page features a front-facing elephant head surrounded by large botanical shapes. Broad ears and the central trunk create strong, easy-to-follow outlines, while petals and leaves around the animal provide additional sections to color. The balanced arrangement gives the printable a decorative mandala feel without relying on tiny repetitive details.",
+    ideas: "Classic gray works well for the elephant, but blue, violet, or warm earth tones can create a more imaginative version. Use contrasting flower colors around the ears and repeat the same greens in the leaves to keep the composition balanced. Shading the ears slightly darker than the face can add simple depth.",
+    printTip: "Use fit-to-page when printing on A4 or Letter paper. Colored pencils are useful for gentle shading on the elephant, while markers can make the surrounding flowers more vivid."
+  },
+  "fantasy-castle-mandala": {
+    about: "This fantasy castle coloring page shows a storybook castle with tall towers surrounded by stars and decorative vines. The architecture provides clear vertical shapes to color, while the smaller sky and plant details give the page a magical atmosphere. It is a good choice for children and fantasy fans who enjoy castles without an overly complicated scene.",
+    ideas: "Try pale stone, pink, blue, or purple for the castle and reserve brighter yellows for windows and stars. A deep blue or violet sky theme can create a nighttime scene, while greens and flower colors can make the vines stand apart from the towers. Metallic-style yellow and gray pencil tones also suit the fantasy details.",
+    printTip: "Print on A4 or Letter paper with fit-to-page selected. Pencils are useful around windows, stars, and vines; thicker paper is preferable if you plan to use markers."
+  },
+  "lighthouse-and-waves-mandala": {
+    about: "This lighthouse coloring page combines a tall coastal lighthouse with rolling waves and shore-inspired details. The lighthouse creates a strong central focal point, while the curved water shapes provide movement around it. Medium-sized sections make the design approachable while still offering enough detail for a relaxing ocean-themed coloring session.",
+    ideas: "A classic red-and-white lighthouse stands out against blue or turquoise waves, but navy, yellow, or pastel combinations work too. Use several blue tones in the water to separate the waves, then add sandy or rocky earth colors to coastal details. A pale sky keeps attention on the lighthouse.",
+    printTip: "Print on standard A4 or Letter paper using fit-to-page. Colored pencils make it easy to layer different blues in the waves; markers work best on heavier paper to prevent bleed-through."
+  }
+};
