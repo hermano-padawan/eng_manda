@@ -666,5 +666,55 @@ export const seoExperiments: Record<string, NonNullable<ColoringPage["seoContent
     about: "This lighthouse coloring page combines a tall coastal lighthouse with rolling waves and shore-inspired details. The lighthouse creates a strong central focal point, while the curved water shapes provide movement around it. Medium-sized sections make the design approachable while still offering enough detail for a relaxing ocean-themed coloring session.",
     ideas: "A classic red-and-white lighthouse stands out against blue or turquoise waves, but navy, yellow, or pastel combinations work too. Use several blue tones in the water to separate the waves, then add sandy or rocky earth colors to coastal details. A pale sky keeps attention on the lighthouse.",
     printTip: "Print on standard A4 or Letter paper using fit-to-page. Colored pencils make it easy to layer different blues in the waves; markers work best on heavier paper to prevent bleed-through."
+  },
+  "geometric-cat-mandala": {
+    about: "This geometric cat coloring page builds a seated cat from soft angular shapes and surrounds it with a balanced ring of leaves. The clear face, ears, and body give the picture an obvious focal point, while the repeated botanical details add a moderate level of complexity without creating very small spaces.",
+    ideas: "Try gray, ginger, cream, or black for the cat and use a limited set of greens around the leaves. For a more playful version, color the geometric sections of the cat in neighboring shades such as blue and violet. Repeating two accent colors around the wreath will keep the symmetrical design easy to read.",
+    printTip: "Print on A4 or Letter paper with fit-to-page enabled. Colored pencils are useful for changing shade between the geometric sections, while markers work best on thicker paper."
+  },
+  "geometric-owl-mandala": {
+    about: "This owl coloring page centers a front-facing owl with large round eyes, broad feather shapes, and a decorative botanical frame. The face offers strong symmetrical features and the surrounding leaves add extra areas to color, creating a medium-detail printable that still has clearly separated sections.",
+    ideas: "Natural browns, creams, and golds suit the owl, while blues or purples can create a more imaginative bird. Keep the eyes bright so they remain the focal point, then repeat two or three colors through the feathers. Green leaves or a contrasting botanical palette can separate the owl from its frame.",
+    printTip: "Use A4 or Letter paper and select fit-to-page. Pencils are ideal for layering feather tones and working around the eyes; use heavier paper for markers."
+  },
+  "geometric-butterfly-mandala": {
+    about: "This butterfly coloring page features open geometric wings inside a simple leafy wreath. Matching shapes on the left and right wings make the design naturally symmetrical, while the broad wing sections leave room for gradients, repeated patterns, or contrasting colors. The surrounding leaves add detail without overwhelming the central butterfly.",
+    ideas: "Choose two or three colors for the wings and mirror them on both sides to emphasize symmetry. Yellow and orange create a warm butterfly, while blue, turquoise, and violet give a cooler look. A simple green wreath helps brighter wing colors stand out clearly.",
+    printTip: "Print at high quality on A4 or Letter paper. Colored pencils work especially well for gradients inside the wings; markers can produce bold symmetrical blocks of color on heavier paper."
+  },
+  "sun-and-moon-mandala": {
+    about: "This sun and moon coloring page brings two celestial symbols together with stars and symmetrical leaves. The contrasting sun and crescent shapes give the composition two distinct focal areas, while the surrounding decorative elements create a balanced fantasy design with comfortable spaces for coloring.",
+    ideas: "Use warm yellows, oranges, and reds for the sun and cooler blues, violets, or silvers for the moon. A dark blue background effect around the stars can strengthen the night-sky theme. Repeating the same greens or muted colors in the leaves helps connect the warm and cool halves.",
+    printTip: "Print on A4 or Letter paper using fit-to-page. Pencils make it easy to blend warm and cool gradients; gel pens can be used sparingly for small star details."
+  },
+  "planets-and-stars-mandala": {
+    about: "This space coloring page arranges planets, orbital lines, and stars into a clear geometric scene. Different planet sizes provide several focal points, while the curved orbits guide the eye around the composition. The design offers enough detail for older children and adults without depending on tiny repetitive sections.",
+    ideas: "Give each planet its own palette: rusty orange for a Mars-inspired world, blue and green for an Earth-like planet, or purple and turquoise for imaginary worlds. Yellow stars can add contrast, and a dark blue or violet space palette can make the planets appear brighter.",
+    printTip: "Print on A4 or Letter paper at high quality. Colored pencils are useful for shading round planets, while markers can create stronger flat colors on heavier paper."
+  },
+  "hot-air-balloon-mandala": {
+    about: "This hot air balloon coloring page shows a decorated balloon floating among soft clouds inside a circular composition. The large balloon canopy is divided into clear sections that invite repeated color patterns, while the basket and clouds add smaller details without making the printable too intricate.",
+    ideas: "Alternate bright colors across the balloon panels or use a gradual rainbow from one side to the other. Warm reds and yellows create a sunny look, while teal, blue, and violet produce a calmer palette. Keep the clouds pale so the decorated balloon remains the main focus.",
+    printTip: "Print on A4 or Letter paper with fit-to-page selected. Crayons and markers suit the broad balloon panels; pencils give more control over the basket and smaller decorative lines."
+  },
+  "under-the-sea-mandala": {
+    about: "This under-the-sea coloring page places a fish among coral, seaweed, and bubbles in an open underwater scene. The central fish is easy to identify and the surrounding marine plants create varied shapes to color. Larger water-themed elements make the page approachable while still providing plenty of visual interest.",
+    ideas: "Use orange, yellow, blue, or striped combinations for the fish and vary the coral with pinks, reds, and purples. Several shades of green or turquoise can separate the seaweed. Leaving bubbles very pale or adding a light blue edge helps them stay distinct from the other ocean details.",
+    printTip: "Print on A4 or Letter paper using fit-to-page. Pencils are useful for fish stripes and coral shading, while markers can create vivid underwater colors on thicker paper."
+  },
+  "woodland-cottage-mandala": {
+    about: "This woodland cottage coloring page features a small cozy house surrounded by mushrooms, ferns, and trees. The cottage provides a clear central subject, while the forest plants form a natural frame with a mixture of broad and medium-sized coloring spaces. It suits anyone who enjoys storybook homes and woodland scenes.",
+    ideas: "Try warm brown or cream walls with a red, green, or blue roof, then use earthy greens around the ferns and trees. Red-and-white mushrooms can add bright accents. For an autumn version, replace some greens with orange, ochre, and deep red.",
+    printTip: "Print on A4 or Letter paper at high quality. Colored pencils are well suited to wood, foliage, and mushroom details; heavier paper is recommended for markers."
+  },
+  "japanese-garden-mandala": {
+    about: "This Japanese garden coloring page combines a curved bridge, a traditional lantern, water, and maple leaves in a quiet landscape scene. The bridge gives the picture a strong central structure, while foliage and garden details create smaller areas around it. The composition is designed for relaxed, medium-detail coloring.",
+    ideas: "A red or warm wooden bridge can contrast with green foliage and blue water. For an autumn garden, use red, orange, and gold maple leaves with muted stone colors for the lantern. Keeping the water in pale blue or turquoise tones helps the bridge and leaves remain prominent.",
+    printTip: "Print on A4 or Letter paper using fit-to-page. Pencils work well for subtle water and leaf shading; markers are best on thicker paper if you want stronger colors."
+  },
+  "bicycle-with-flowers": {
+    about: "This bicycle coloring page shows a classic bike with a basket filled with flowers. The wheels and frame create clean geometric lines, while petals and leaves add softer decorative detail. The combination gives the printable a cheerful springtime feel and a mix of large and smaller areas to color.",
+    ideas: "Color the bicycle frame in a strong single shade such as red, blue, mint, or yellow, then choose two or three complementary flower colors for the basket. Darker tires and a neutral basket help the floral arrangement stand out. Greens can be repeated through the leaves for a cohesive look.",
+    printTip: "Print on A4 or Letter paper at high quality. Pencils give good control around spokes and flowers, while markers are useful for the larger bicycle frame on heavier paper."
   }
 };
