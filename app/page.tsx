@@ -77,6 +77,7 @@ export default function Home() {
                       width="800"
                       height="800"
                       loading="lazy"
+                      decoding="async"
                       alt=""
                     />
                     <span>
